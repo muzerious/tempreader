@@ -25,7 +25,7 @@ def read_temp_raw(): # Read the raw temp from the file
 def read_temp(): # you can also throw in some Fahrenheit conversion here but I stripped it out
     lines = read_temp_raw()
 
-    while lines[0].strip()[-3:] != 'YES':
+    while lines[0].strip()[-3:] != 'YES': # This here thing keeps reading the file for a value and retries until it has one
         time.sleep(0.2)
         lines = read_temp_raw()
 
